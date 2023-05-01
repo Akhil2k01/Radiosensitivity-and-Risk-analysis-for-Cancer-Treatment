@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<!--------------------------------------------------------------->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Sensitivity And Risk Analysis For Cancer Treatment</title>
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Font Awesome CDN-->
+    <script src="https://kit.fontawesome.com/23412c6a8d.js"></script>
+    <!--Remix Design CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+    <!--Custom Stylesheet-->
+    <link rel="stylesheet" href="{% static 'about.css'%}" />
+</head>
+<!--------------------------------------------------------------->
+
+<body>
+    <!--header-->
+    <header>
+        <a href="/" class="logo">RRCT</a>
+        <div class="righSide">
+            <div class="btns dayNight">
+                <ion-icon name="moon-outline"></ion-icon>
+                <ion-icon name="sunny-outline"></ion-icon>
+            </div>
+            <div class="btns menuToggle">
+                <ion-icon name="menu-outline"></ion-icon>
+                <ion-icon name="close-outline"></ion-icon>
+            </div>
+        </div>
+    </header>
+    <!--/header-->
+    <!--Sidebar Navigation -->
+    <u1 class="navigation">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/cregister">Clinic Registration</a></li>
+        <li><a href="/pform">Patient Form</a></li>
+        <li><a href="/help">Help</a></li>
+    </u1>
+    <!--/Sidebar Navigation -->
+    <section class="about">
+        <div class="main">
+            <img class="img" src="{% static 'assets/a5.png'%}">
+            <div class="all-text">
+                <h2>ABOUT US</h2>
+                <h4>Your health is our priority!</h4>
+                <p>Personalized treatment plans and individual outcomes will be enhanced by the capacity to forecast a cancer patient's response to radiotherapy and risk of experiencing negative long-term health impacts. As exposure to radiation can cause
+                    dysfunctional telomere pathologies that coincidentally overlap with many radiation-induced late effects, ranging from degenerative conditions like fibrosis and cardiovascular disease to proliferative pathologies like cancer, telomeres
+                    represent a compelling biomarker of individual radiosensitivity and risk. Here, telomere length will be measured using Quantitative fluorescence in situ hybridization (Q-FISH) in a group of cancer patients receiving intensity-modulated
+                    radiation therapy (IMRT). Chromosome abnormalities will be evaluated in order to determine genome instability and improve customized treatment.</p>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------------------->
+    <section class="team">
+        <div class="center">
+            <h1>OUR TEAM</h1>
+        </div>
+        <div class="team-content">
+            <div class="box">
+                <div class="team-member">
+                    <img src="{% static 'assets/t0.jpg'%}">
+                    <h3>Ashwin Kumar</h3>
+                    <h4>Associate Professor</h4>
+                    <h5>Guide</h5>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="{% static 'assets/t1.jpg'%}">
+                    <h3>Abhishek Manoj</h3>
+                    <h4>4MT19CS003</h4>
+                    <h5>Developer</h5>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="{% static 'assets/t2.jpg'%}">
+                    <h3>Akhil</h3>
+                    <h4>4MT19CS016</h4>
+                    <h5>Developer</h5>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="{% static 'assets/t3.JPG'%}">
+                    <h3>Anish A Hegde</h3>
+                    <h4>4MT19CS022</h4>
+                    <h5>Developer</h5>
+                </div>
+            </div>
+            <div class="box">
+                <div class="team-member">
+                    <img src="{% static 'assets/t4.JPG'%}">
+                    <h3>Hrithika Bhat</h3>
+                    <h4>4MT19CS059</h4>
+                    <h5>Developer</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------------------->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        let dayNight = document.querySelector('.dayNight')
+        let menuToggle = document.querySelector('.menuToggle')
+        let body = document.querySelector('body')
+        let navigation = document.querySelector('.navigation')
+        dayNight.onclick = function() {
+            body.classList.toggle('dark')
+            dayNight.classList.toggle('active')
+        }
+        menuToggle.onclick = function() {
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+<!--------------------------------------------------------------->
+
+</html>

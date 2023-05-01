@@ -1,0 +1,268 @@
+/*import fonts from Google fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;500;700;900&family=Bebas+Neue&family=BenchNine:wght@300&family=Economica&family=Elsie&family=Forum&family=Gudea:wght@400;700&family=Pathway+Gothic+One&family=Playfair+Display:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&family=Poiret+One&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,500;1,8..60,300;1,8..60,500&family=Viaoda+Libre&display=swap');
+:root {
+    --black: #222;
+    --white: #fff;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'BenchNine', sans-serif;
+    font-family: 'Economica', sans-serif;
+    font-family: 'Elsie', cursive;
+    font-family: 'Forum', cursive;
+    font-family: 'Gudea', sans-serif;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Poiret One', cursive;
+    font-family: 'Source Serif 4', serif;
+    font-family: 'Viaoda Libre', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dark {
+    --white: #222;
+    --black: #fff;
+}
+
+
+/*header*/
+
+header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    Width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+}
+
+header .logo {
+    position: relative;
+    display: inline-flex;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 2em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.righSide {
+    display: flex;
+}
+
+.btns {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btns ion-icon {
+    font-size: 1.5em;
+    color: var(--black);
+}
+
+.btns.menuToggle {
+    font-size: 3em;
+}
+
+.btns ion-icon:nth-child(2) {
+    display: none;
+}
+
+.btns.active ion-icon:nth-child(2) {
+    display: block;
+}
+
+.btns.active ion-icon:nth-child(1) {
+    display: none;
+}
+
+.navigation {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--white);
+    z-index: 3;
+    transition: 0.5s;
+}
+
+.navigation.active {
+    left: 0;
+}
+
+.navigation li {
+    list-style: none;
+}
+
+.navigation li a {
+    display: inline-flex;
+    margin: 5px 0;
+    font-size: 1.25em;
+    text-decoration: none;
+    color: var(--black);
+    padding: 5px 20px;
+    border-radius: 40px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navigation li a:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+.about {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+    z-index: 2;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main img {
+    width: 90vh;
+    padding-left: 90px;
+    padding-top: 100px;
+    padding-right: 50px;
+}
+
+.all-text {
+    padding-top: 105px;
+}
+
+.all-text h2 {
+    font-family: 'Elsie', cursive;
+    font-weight: 800;
+    font-size: 2.8em;
+    color: var(--black);
+}
+
+.all-text h4 {
+    font-family: 'Viaoda Libre', cursive;
+    font-weight: 600;
+    font-size: 1.8em;
+    color: var(--black);
+}
+
+.all-text p {
+    padding-top: 20px;
+    font-family: 'Forum', cursive;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding-right: 100px;
+    color: var(--black);
+    text-align: justify;
+}
+
+.team {
+    position: relative;
+    padding-top: 800px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+    flex-direction: column;
+    z-index: 1;
+    padding-bottom: 60px;
+}
+
+.team center {
+    padding-bottom: 300px;
+}
+
+.team-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.team-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    border-style: solid;
+}
+
+.center h1 {
+    color: var(--black);
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Elsie', cursive;
+    font-weight: 800;
+}
+
+.box {
+    padding: 16px;
+    border-radius: 15px;
+    transition: all .38s ease;
+}
+
+.box h3 {
+    font-size: 25px;
+    font-family: 'Forum', cursive;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.box h4 {
+    font-size: 20px;
+    font-family: 'Forum', cursive;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.box h5 {
+    font-size: 15px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+}

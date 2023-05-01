@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<!--------------------------------------------------------------->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Sensitivity And Risk Analysis For Cancer Treatment</title>
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Font Awesome CDN-->
+    <script src="https://kit.fontawesome.com/23412c6a8d.js"></script>
+    <!--Remix Design CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+    <!--Custom Stylesheet-->
+    <link rel="stylesheet" href="{% static 'pform.css'%}" />
+</head>
+<!--------------------------------------------------------------->
+
+<body>
+    <!--Alert message-->
+    {% if messages %}
+        {% for message in messages %}
+         {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+
+        {% endfor %}
+
+    {% endif %}
+    <!--header-->
+    <header>
+        <a href="/" class="logo">RRCT</a>
+        <div class="righSide">
+            <div class="btns dayNight">
+                <ion-icon name="moon-outline"></ion-icon>
+                <ion-icon name="sunny-outline"></ion-icon>
+            </div>
+            <div class="btns menuToggle">
+                <ion-icon name="menu-outline"></ion-icon>
+                <ion-icon name="close-outline"></ion-icon>
+            </div>
+        </div>
+    </header>
+    <!--/header-->
+    <!--Sidebar Navigation -->
+    <u1 class="navigation">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/cregister">Clinic Registration</a></li>
+        <li><a href="/pform">Patient Form</a></li>
+        <li><a href="/help">Help</a></li>
+    </u1>
+    <!--/Sidebar Navigation -->
+    <!--------------------------------------------------------------->
+    <section class="team">
+        <div class="center">
+            <h1>REGISTER</h1>
+        </div>
+        <form method="POST" enctype='multipart/form-data'>
+            {% csrf_token %}
+            <div class="team-content">
+                <div class="inputfeild">
+                    <label for="file-input" class="drop-container">
+                    <span class="drop-title">Drop files here</span>
+                    or
+                    <input type="file" accept="image/*" class="file-input" required="" id="img" name="img">
+                  </label>
+                </div>
+                <div class="if">
+                    <label>Gender</label>
+                    <select name="gender" required="">
+                        <option value="" disabled selected hidden>Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select><br>
+                    <label>Cancer</label>
+                    <select name="type" required="">
+                        <option value="" disabled selected hidden>Type</option>
+                        <option value="Blood">Blood Cancer</option>
+                        <option value="Lung">Lung Cancer</option>
+                        <option value="Skin">Skin Cancer</option>
+                        <option value="Breast">Breast Cancer</option>
+                        <option value="Prostate">Prostate Cancer</option>
+                    </select>
+                    <select name="kind" required="">
+                        <option value="" disabled selected hidden>Kind</option>
+                        <option value="Hodgkin lymphoma">Hodgkin lymphoma</option>
+                        <option value="Non-Hodgkin lymphoma">Non-Hodgkin lymphoma</option>
+                        <option value="Multiple lymphoma">Multiple lymphoma</option>
+                        <option value="Non-Small cell">Non-Small Cell</option>
+                        <option value="Small cell">Small Cell</option>
+                        <option value="Basal cell carcinoma">Basal cell carcinoma</option>
+                        <option value="Squamous cell carcinoma">Squamous cell carcinoma</option>
+                        <option value="Merkel cell carcinoma">Merkel  cell carcinoma</option>
+                        <option value="Non-recurrent">Non-recurrent</option>
+                        <option value="Locally-advanced">Locally-advanced</option>
+                        <option value="Recurrent">Recurrent</option>
+                    </select>
+                    <select name="stage" required="">
+                        <option value="" disabled selected hidden>Stage</option>
+                        <option value="Early">Early</option>
+                        <option value="Advanced">Advanced</option>
+                    </select>
+                    <div class="inputfield">
+                        <label>Clinic ID</label>
+                        <input type="text" class="form__field" name="clid" id="clid" required="" minlength="6" maxlength="6" pattern="[0-9]{6}" title="Please enter 6 digit Clinic ID">
+                    </div>
+                </div>
+                <div class="inputfield">
+                    <label>Patient ID</label>
+                    <input type="text" class="form__field" name="id" id="id" required="" minlength="8" maxlength="8" pattern="[0-9]{8}" title="Please enter 8 digit Patient ID">
+                </div>
+                <div class="inputfield">
+                    <label>Email Address</label>
+                    <input type="email" class="form__field" name="email" id="email" required="">
+                </div>
+                <div class="inputfield">
+                    <label>First Name</label>
+                    <input type="text" class="form__field" name="first_name" id="first_name" required="">
+                </div>
+                <div class="inputfield">
+                    <label>Phone Number</label>
+                    <input type="text" class="form__field" name="phone" id="phone" required="" minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" title="Please enter 10 digit Phone Number">
+                </div>
+                <div class="inputfield">
+                    <label>Last Name</label>
+                    <input type="text" class="form__field" name="last_name" id="phone" required="">
+                </div>
+                <div class="inputfield">
+                    <label>Address Line 1</label>
+                    <input type="text" class="form__field" name="address_a" id="address_a" required="">
+                </div>
+                <div class="inputfield">
+                    <label>Age</label>
+                    <input type="text" class="form__field" name="age" id="age" required="" maxlength="2" pattern="[0-9]+">
+                </div>
+                <div class="inputfield">
+                    <label>Address Line 2</label>
+                    <input type="text" class="form__field" name="address_b" id="address_b" required="">
+                </div>
+            </div>
+            <div class="btn">
+                <input type="submit">
+                <input type="reset">
+            </div>
+        </form>
+    </section>
+    <!--------------------------------------------------------------->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        let dayNight = document.querySelector('.dayNight')
+        let menuToggle = document.querySelector('.menuToggle')
+        let body = document.querySelector('body')
+        let navigation = document.querySelector('.navigation')
+        dayNight.onclick = function() {
+            body.classList.toggle('dark')
+            dayNight.classList.toggle('active')
+        }
+        menuToggle.onclick = function() {
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+<!--------------------------------------------------------------->
+
+</html>

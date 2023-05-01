@@ -1,0 +1,222 @@
+/*import fonts from Google fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;500;700;900&family=Bebas+Neue&family=BenchNine:wght@300&family=Economica&family=Elsie&family=Forum&family=Gudea:wght@400;700&family=Pathway+Gothic+One&family=Playfair+Display:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&family=Poiret+One&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,500;1,8..60,300;1,8..60,500&family=Viaoda+Libre&display=swap');
+:root {
+    --black: #222;
+    --white: #fff;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'BenchNine', sans-serif;
+    font-family: 'Economica', sans-serif;
+    font-family: 'Elsie', cursive;
+    font-family: 'Forum', cursive;
+    font-family: 'Gudea', sans-serif;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Poiret One', cursive;
+    font-family: 'Source Serif 4', serif;
+    font-family: 'Viaoda Libre', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dark {
+    --white: #222;
+    --black: #fff;
+}
+
+
+/*header*/
+
+header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    Width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+}
+
+header .logo {
+    position: relative;
+    display: inline-flex;
+    color: var(--black);
+    text-decoration: none;
+    font-size: 2em;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.righSide {
+    display: flex;
+}
+
+.btns {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btns ion-icon {
+    font-size: 1.5em;
+    color: var(--black);
+}
+
+.btns.menuToggle {
+    font-size: 3em;
+}
+
+.btns ion-icon:nth-child(2) {
+    display: none;
+}
+
+.btns.active ion-icon:nth-child(2) {
+    display: block;
+}
+
+.btns.active ion-icon:nth-child(1) {
+    display: none;
+}
+
+.main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    user-select: none;
+    mix-blend-mode: screen;
+}
+
+.dark .mask {
+    filter: invert(1);
+    mix-blend-mode: multiply;
+}
+
+.main h2 {
+    position: relative;
+    z-index: 3;
+    text-transform: uppercase;
+    font-family: 'Elsie', cursive;
+    color: var(--black);
+    font-weight: 900;
+    text-shadow: 0 20px 30px rgba(0, 0, 0, 0, 2);
+}
+
+.navigation {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--white);
+    z-index: 4;
+    transition: 0.5s;
+}
+
+.navigation.active {
+    left: 0;
+}
+
+.navigation li {
+    list-style: none;
+}
+
+.navigation li a {
+    display: inline-flex;
+    margin: 5px 0;
+    font-size: 1.25em;
+    text-decoration: none;
+    color: var(--black);
+    padding: 5px 20px;
+    border-radius: 40px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navigation li a:hover {
+    background: var(--black);
+    color: var(--white);
+}
+
+.copyrightText {
+    position: absolute;
+    left: 100px;
+    bottom: 10px;
+    z-index: 4;
+    font-family: 'Forum', cursive;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: var(--black);
+}
+
+.sci {
+    position: absolute;
+    right: 100px;
+    bottom: 20px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.75em;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+    .copyrightText {
+        left: 20px;
+        bottom: 20px;
+    }
+    .sci {
+        right: 20px;
+        bottom: 20px;
+    }
+}

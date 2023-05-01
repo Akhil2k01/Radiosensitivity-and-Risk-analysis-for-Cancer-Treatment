@@ -1,0 +1,126 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<!--------------------------------------------------------------->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Sensitivity And Risk Analysis For Cancer Treatment</title>
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Font Awesome CDN-->
+    <script src="https://kit.fontawesome.com/23412c6a8d.js"></script>
+    <!--Remix Design CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+    <!--Custom Stylesheet-->
+    <link rel="stylesheet" href="{% static 'help.css'%}" />
+</head>
+<!--------------------------------------------------------------->
+
+<body>
+    <!--header-->
+    <header>
+        <a href="/" class="logo">RRCT</a>
+        <div class="righSide">
+            <div class="btns dayNight">
+                <ion-icon name="moon-outline"></ion-icon>
+                <ion-icon name="sunny-outline"></ion-icon>
+            </div>
+            <div class="btns menuToggle">
+                <ion-icon name="menu-outline"></ion-icon>
+                <ion-icon name="close-outline"></ion-icon>
+            </div>
+        </div>
+    </header>
+    <!--/header-->
+    <!--Sidebar Navigation -->
+    <u1 class="navigation">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/cregister">Clinic Registration</a></li>
+        <li><a href="/pform">Patient Form</a></li>
+        <li><a href="/help">Help</a></li>
+    </u1>
+    <!--/Sidebar Navigation -->
+    <section class="about">
+        <div class="heading">
+            <h1>PROCEDURE</h1>
+        </div>
+        <div class="main">
+            <img class="img" src="{% static 'assets/h1.jpg'%}">
+            <div class="all-text">
+                <h2>STEP 1</h2>
+                <h4>Diagnosis of Cancer-Type, Stage</h4>
+                <p>Preliminary step is to get checked and diagnosed for the type of cancer the patient is suffering from, along with the stage to be able to classify the test results in the future. The diagonsis done here is of the utmost importance as it
+                    determines the entire classification process. The classification here primarily are of 5 types of cancer: Lung Cancer (Non-Small Cell and Small Cell), Skin Cancer (Melanoma), Prostate Cancer, Breast Cancer, and Blood Cancer. The stages
+                    however depends on the type of cancer the patient is diagnosed with.</p>
+            </div>
+        </div>
+        <div class="main">
+            <img class="img" src="{% static 'assets/a4.jpg'%}">
+            <div class="all-text">
+                <h2>STEP 2</h2>
+                <h4>Filling of form and Blood Test</h4>
+                <p>The next step is to approach the clinic or the laboratory where a form will be filled along with the blood drawn. The blood test is given a ID which is the register ID and report ID. This process is different from the other kinds of blood
+                    tests as the prominence relies on the telomere length. Telomere is a bio-marker present in the tail of the DNA which has multiple functionalities. The first being an important component during DNA replication and joining of multiple
+                    DNA's into a strand. However, here it exhibits the health of the patient and a marker that shows the radiation units an individual can be exposed to. This, is the functionality the treatment relies on and what we measure during the
+                    analysis.
+                </p>
+            </div>
+        </div>
+        <div class="main">
+            <img class="img" src="{% static 'assets/h2.jpg'%}">
+            <div class="all-text">
+                <h2>STEP 3</h2>
+                <h4>Measurement of Telomere and Analysis</h4>
+                <p>The images are generated which consists of the DNA from the blood sample colleceted. From this, the images are synthesised to get only the telomere highlighted. Telomere length is measured using a model and the length is taken as basis
+                    of classification.</p>
+            </div>
+        </div>
+        <div class="main">
+            <img class="img" src="{% static 'assets/h9.jpg'%}">
+            <div class="all-text">
+                <h2>STEP 4</h2>
+                <h4>Report on Personalized treatment method</h4>
+                <p>Measurement of the Telomere leads to the end of classisification process under the analysis. The results will give the insight on the various treatment methods that can be an option amongst the many with minimum side-effects and effective
+                    treatment with better recovery.</p>
+            </div>
+        </div>
+        <div class="main">
+            <img class="img" src="{% static 'assets/unnamed.jpg'%}">
+            <div class="all-text">
+                <h2>STEP 5</h2>
+                <h4>Recovery guide and Post-Treatment check</h4>
+                <p>A set of recovery methods are also suggested in the report with healthier lifestyle changes to be adapted. There will be post-treatment checks to check both the telomere length and whether there is any relapse of cancer so they can be
+                    treated at the earlier stages.</p>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------------------->
+    <!--------------------------------------------------------------->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        let dayNight = document.querySelector('.dayNight')
+        let menuToggle = document.querySelector('.menuToggle')
+        let body = document.querySelector('body')
+        let navigation = document.querySelector('.navigation')
+        dayNight.onclick = function() {
+            body.classList.toggle('dark')
+            dayNight.classList.toggle('active')
+        }
+        menuToggle.onclick = function() {
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+<!--------------------------------------------------------------->
+
+</html>
